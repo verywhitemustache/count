@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="input_section main-container_item">
+            <span class="button income inactive" onclick="changeInout ()">income</span>
+            <span class="button outcome" onclick="changeInout ()">outcome</span>
+            <br>
+            <!-- income section -->
+
+            <div class="income-container">
+                <select>
+                    <option value="salary">з/п</option>
+                    <option value="others">прочеее</option>
+                </select>
+                <input type="text" id="amount">
+                <input type="submit" value="submit">
+            </div>
+
+            <!-- outcome section -->
+
+            <div class="outcome-container">
+                <select>
+                    <option value="entertainments">развлечения</option>
+                    <option value="food">Еда</option>
+                    <option value="others">прочеее</option>
+                </select>
+                <input type="text" id="amount">
+                <input type="submit" value="submit">
+            </div>
+
+        </div>
+        <div class="graphic-section main-container_item"></div>
+        <div class="transaction-section main-container_item"></div>
+        <div class="advice-section main-container_item"></div>
+    </div>
+</body>
+</html>

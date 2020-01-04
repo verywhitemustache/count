@@ -1,0 +1,16 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-container_item {
+    width: 50%;
+    height: 50vh;
+    outline:2px dashed red;
+}
