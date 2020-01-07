@@ -6,34 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>counter</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="main-container">
         <div class="input_section main-container_item">
-            <span class="button income inactive" onclick="changeInout ()">income</span>
-            <span class="button outcome" onclick="changeInout ()">outcome</span>
-            <br>
+            <div class="button toggle" onclick="changeInputField ()">income/outcome</div>
+            <p class="incomeDescription">income</p>
+            <p class="outcomeDescription active">outcome</p>
+
             <!-- income section -->
 
             <div class="income-container">
-                <select>
+                <select id="select-incomeItem">
                     <option value="salary">з/п</option>
                     <option value="others">прочеее</option>
                 </select>
-                <input type="text" id="amount">
-                <input type="submit" value="submit">
+                <input type="text" id="amountOfIncome">
+                <input type="submit" value="submit income" onclick="countIncome ()">
             </div>
 
             <!-- outcome section -->
 
-            <div class="outcome-container">
-                <select>
+            <div class="outcome-container inactive">
+                <select id="select-outcomeItem">
                     <option value="entertainments">развлечения</option>
                     <option value="food">Еда</option>
                     <option value="others">прочеее</option>
                 </select>
-                <input type="text" id="amount">
-                <input type="submit" value="submit">
+                <input type="text" id="amountOfOutcome">
+                <input type="submit" value="submit outcome" onclick="countOutcome ()">
             </div>
 
         </div>

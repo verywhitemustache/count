@@ -14,3 +14,27 @@ body {
     height: 50vh;
     outline:2px dashed red;
 }
+
+.button {
+    display:inline-block;
+    width: 150px;
+    height: 50px;
+    border: 2px solid red;
+    border-radius: 20px;
+    cursor:pointer;
+}
+
+.inactive {
+    display:none;
+}
+
+.outcomeDescription,
+.incomeDescription {
+    display:inline-block;
+    border:2px solid blue;
+}
+
+.outcomeDescription.active,
+.incomeDescription.active {
+    border: 2px solid red;
+}
