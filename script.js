@@ -1,14 +1,28 @@
 function countIncome () {
     var value = document.getElementById("amountOfIncome").value
     var select = document.getElementById("select-incomeItem").value
-    console.log(value);
-    console.log(select);
+
+    var transactionContainer = document.getElementById("page-container")
+    var transaction = document.createElement("div")
+    transaction.className = "page-item"
+    transaction.innerHTML = select + " " + value
+    transactionContainer.appendChild(transaction)
+
 }
+
 function countOutcome () {
     var value = document.getElementById("amountOfOutcome").value
     var select = document.getElementById("select-outcomeItem").value
-    console.log(value);
-    console.log(select);
+    
+    var transactionContainer = document.getElementById("page-container")
+    var transaction = document.createElement("div")
+    
+    var transactionContainer = document.getElementById("page-container")
+    var transaction = document.createElement("div")
+    transaction.className = "page-item"
+    transaction.innerHTML = select + " " + value
+    transactionContainer.appendChild(transaction)
+
 }
 
 
