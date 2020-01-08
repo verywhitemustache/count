@@ -3,11 +3,17 @@ function countIncome () {
     var select = document.getElementById("select-incomeItem").value
 
     var transactionContainer = document.getElementById("page-container")
+    
     var transaction = document.createElement("div")
     transaction.className = "page-item"
     transaction.innerHTML = select + " " + value
     transactionContainer.appendChild(transaction)
 
+    var count = transactionContainer.childNodes.length - 1
+
+    if (count > 4) {
+        alert("cool")
+    }
 }
 
 function countOutcome () {
