@@ -3,17 +3,27 @@ function countIncome () {
     var select = document.getElementById("select-incomeItem").value
 
     var transactionContainer = document.getElementById("page-container")
-    
+    var transactionSection = document.getElementById("transaction-section")
+    var transactionSectionForAdd = document.getElementById("transaction-section").lastElementChild
+
     var transaction = document.createElement("div")
+    
     transaction.className = "page-item"
     transaction.innerHTML = select + " " + value
-    transactionContainer.appendChild(transaction)
-
-    var count = transactionContainer.childNodes.length - 1
-
-    if (count > 4) {
-        alert("cool")
+    transactionSectionForAdd.appendChild(transaction)
+    
+    console.log(transactionSectionForAdd.childNodes.length)
+    
+    if (transactionSectionForAdd.childNodes.length - 1   == 4) {
+        var previousSublings = document.querySelector(".page-container_active")
+        previousSublings.classList.remove("page-container_active")
+        var pageContainer = document.createElement("div")
+        pageContainer.className = "page-container page-container_active"
+        pageContainer.id = "page-container"
+        transactionSection.appendChild(pageContainer)
+        
     }
+    
 }
 
 function countOutcome () {
@@ -21,13 +31,27 @@ function countOutcome () {
     var select = document.getElementById("select-outcomeItem").value
     
     var transactionContainer = document.getElementById("page-container")
+    var transactionSection = document.getElementById("transaction-section")
+    var transactionSectionForAdd = document.getElementById("transaction-section").lastElementChild
+
     var transaction = document.createElement("div")
     
-    var transactionContainer = document.getElementById("page-container")
-    var transaction = document.createElement("div")
     transaction.className = "page-item"
     transaction.innerHTML = select + " " + value
-    transactionContainer.appendChild(transaction)
+    transactionSectionForAdd.appendChild(transaction)
+    
+    console.log(transactionSectionForAdd.childNodes.length)
+    
+    if (transactionSectionForAdd.childNodes.length - 1   == 4) {
+        var previousSublings = document.querySelector(".page-container_active")
+        previousSublings.classList.remove("page-container_active")
+        var pageContainer = document.createElement("div")
+        pageContainer.className = "page-container page-container_active"
+        pageContainer.id = "page-container"
+        transactionSection.appendChild(pageContainer)
+        
+    }
+    
 
 }
 

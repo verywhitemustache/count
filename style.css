@@ -50,12 +50,12 @@ body {
 .page-container {
     width: 100%;
     height: 90%;
-    display:flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    display:none;
     padding: 20px;
     padding-bottom: 60px;
     box-sizing: border-box;
+    outline: 2px dashed blue;
+    margin: 10px;
 }
 
 .page-item {
@@ -83,4 +83,8 @@ body {
     height: 20px;
     margin: 7px;
     background-color: white;
+}
+
+.page-container_active {
+    display: block;
 }
