@@ -21,6 +21,7 @@ body {
     width: 50%;
     height: 50vh;
     outline:2px dashed red;
+    box-sizing: border-box;
 }
 
 .button {
@@ -49,8 +50,10 @@ body {
 
 .page-container {
     width: 100%;
-    height: 90%;
+    height: 85%;
     display:none;
+    flex-wrap: wrap;
+    align-content: flex-start;
     padding: 20px;
     padding-bottom: 60px;
     box-sizing: border-box;
@@ -70,7 +73,11 @@ body {
 }
 
 .breadcrumbs-container {
-    height: 10%;
+    position: absolute;
+    bottom:2%;
+    left:45%;
+    width: 30px;
+    height: 30px;
     display:flex;
     justify-content: flex-end;
     align-items: center;
@@ -78,13 +85,11 @@ body {
 
 .breadcrumbs-item {
     display: inline-block;
-    border:2px solid black;
-    width: 20px;
-    height: 20px;
     margin: 7px;
     background-color: white;
+    border:2px solid black;
 }
 
 .page-container_active {
-    display: block;
+    display: flex;
 }

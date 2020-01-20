@@ -12,8 +12,8 @@
     <div class="main-container">
         <div class="input_section main-container_item">
             <div class="button toggle" onclick="changeInputField ()">income/outcome</div>
-            <p class="incomeDescription">income</p>
-            <p class="outcomeDescription active">outcome</p>
+            <p class="incomeDescription" onclick="changeInputField ()">income</p>
+            <p class="outcomeDescription active" onclick="changeInputField ()">outcome</p>
 
             <!-- income section -->
 
@@ -41,12 +41,10 @@
         </div>
         <div class="graphic-section main-container_item"></div>
         <div class="transaction-section main-container_item" id="transaction-section">
-            <div class="page-container page-container_active" id="page-container">
-                
-            </div>
+            <div class="page-container page-container_active" id="page-container"></div>
         </div>
-        <div class="breadcrumbs-container">
-            <div class="breadcrumbs-item item1">1</div>
+        <div class="breadcrumbs-container" id="breadcrumbs-container">
+            <div class="breadcrumbs-item">1</div>
         </div>
         <div class="advice-section main-container_item"></div>
     </div>

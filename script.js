@@ -6,13 +6,15 @@ function countIncome () {
     var transactionSection = document.getElementById("transaction-section")
     var transactionSectionForAdd = document.getElementById("transaction-section").lastElementChild
 
+    var breadCrumbsContainer = document.getElementById("breadcrumbs-container")
+
     var transaction = document.createElement("div")
     
     transaction.className = "page-item"
     transaction.innerHTML = select + " " + value
     transactionSectionForAdd.appendChild(transaction)
     
-    console.log(transactionSectionForAdd.childNodes.length)
+    
     
     if (transactionSectionForAdd.childNodes.length - 1   == 4) {
         var previousSublings = document.querySelector(".page-container_active")
@@ -23,6 +25,14 @@ function countIncome () {
         transactionSection.appendChild(pageContainer)
         
     }
+
+    if (transactionSection.children.length > breadCrumbsContainer.children.length) {
+        var breadcrumb = document.createElement("div")
+        breadcrumb.className = "breadcrumbs-item"
+        breadcrumb.innerHTML = transactionSection.children.length
+        breadCrumbsContainer.appendChild(breadcrumb)
+    }
+
     
 }
 
@@ -34,13 +44,15 @@ function countOutcome () {
     var transactionSection = document.getElementById("transaction-section")
     var transactionSectionForAdd = document.getElementById("transaction-section").lastElementChild
 
+    var breadCrumbsContainer = document.getElementById("breadcrumbs-container")
+
     var transaction = document.createElement("div")
     
     transaction.className = "page-item"
     transaction.innerHTML = select + " " + value
     transactionSectionForAdd.appendChild(transaction)
     
-    console.log(transactionSectionForAdd.childNodes.length)
+    
     
     if (transactionSectionForAdd.childNodes.length - 1   == 4) {
         var previousSublings = document.querySelector(".page-container_active")
@@ -52,6 +64,12 @@ function countOutcome () {
         
     }
     
+    if (transactionSection.children.length > breadCrumbsContainer.children.length) {
+        var breadcrumb = document.createElement("div")
+        breadcrumb.className = "breadcrumbs-item"
+        breadcrumb.innerHTML = transactionSection.children.length
+        breadCrumbsContainer.appendChild(breadcrumb)
+    }
 
 }
 
