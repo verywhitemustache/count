@@ -1,38 +1,37 @@
 function countIncome () {
     var value = document.getElementById("amountOfIncome").value
     var select = document.getElementById("select-incomeItem").value
+    
+    var transactionSectionForAdd = document.getElementById("transaction-section").lastElementChild
 
     var transactionContainer = document.getElementById("page-container")
     var transactionSection = document.getElementById("transaction-section")
-    var transactionSectionForAdd = document.getElementById("transaction-section").lastElementChild
-
-    var breadCrumbsContainer = document.getElementById("breadcrumbs-container")
-
-    var transaction = document.createElement("div")
     
-    transaction.className = "page-item"
-    transaction.innerHTML = select + " " + value
-    transactionSectionForAdd.appendChild(transaction)
-    
-    
-    
-    if (transactionSectionForAdd.childNodes.length - 1   == 4) {
+    if (transactionSectionForAdd.childNodes.length + 1 > 4) {
         var previousSublings = document.querySelector(".page-container_active")
         previousSublings.classList.remove("page-container_active")
         var pageContainer = document.createElement("div")
         pageContainer.className = "page-container page-container_active"
         pageContainer.id = "page-container"
         transactionSection.appendChild(pageContainer)
-        
+    } else {
+        var transaction = document.createElement("div")
+        transaction.className = "page-item"
+        transaction.innerHTML = select + " " + value
+        transactionSectionForAdd.appendChild(transaction)
     }
+    
 
+    var breadCrumbsContainer = document.getElementById("breadcrumbs-container")
+    
     if (transactionSection.children.length > breadCrumbsContainer.children.length) {
         var breadcrumb = document.createElement("div")
         breadcrumb.className = "breadcrumbs-item"
         breadcrumb.innerHTML = transactionSection.children.length
         breadCrumbsContainer.appendChild(breadcrumb)
     }
-
+    
+    
     
 }
 
