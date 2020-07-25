@@ -1,3 +1,5 @@
+
+
 function countIncome () {
     var value = document.getElementById("amountOfIncome").value
     var select = document.getElementById("select-incomeItem").value
@@ -26,7 +28,7 @@ function countIncome () {
     
     if (transactionSection.children.length > breadCrumbsContainer.children.length) {
         var breadcrumb = document.createElement("div")
-        breadcrumb.className = "breadcrumbs-item"
+        breadcrumb.className = "breadcrumbs-item button"
         breadcrumb.innerHTML = transactionSection.children.length
         breadCrumbsContainer.appendChild(breadcrumb)
     }
@@ -65,7 +67,7 @@ function countOutcome () {
     
     if (transactionSection.children.length > breadCrumbsContainer.children.length) {
         var breadcrumb = document.createElement("div")
-        breadcrumb.className = "breadcrumbs-item"
+        breadcrumb.className = "breadcrumbs-item button"
         breadcrumb.innerHTML = transactionSection.children.length
         breadCrumbsContainer.appendChild(breadcrumb)
     }
@@ -87,3 +89,9 @@ function changeInputField () {
     outcomeDescription.classList.toggle("active")
   
 } 
+
+
+function whatButton(button) {
+    console.log("You clicked button with class " + button.className);
+    console.log("You clicked button with text " + button.innerText);
+}
