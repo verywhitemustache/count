@@ -37,6 +37,10 @@ body {
     display:none;
 }
 
+.active {
+    display: block;
+}
+
 .outcomeDescription,
 .incomeDescription {
     display:inline-block;
