@@ -32,7 +32,12 @@ function countIncome () {
         breadcrumb.innerHTML = transactionSection.children.length
         breadCrumbsContainer.appendChild(breadcrumb)
     }
-    
+
+    var transactionContainer = document.getElementById("transaction-section")
+    var previousSublings = document.querySelector(".page-container_active")
+
+    previousSublings.classList.remove("page-container_active")
+    transactionContainer.lastElementChild.classList.add("page-container_active")
     
     
 }
@@ -71,7 +76,11 @@ function countOutcome() {
         breadCrumbsContainer.appendChild(breadcrumb)
     }
 
+    var transactionContainer = document.getElementById("transaction-section")
+    var previousSublings = document.querySelector(".page-container_active")
 
+    previousSublings.classList.remove("page-container_active")
+    transactionContainer.lastElementChild.classList.add("page-container_active")
 
 }
 
