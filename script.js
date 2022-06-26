@@ -8,7 +8,7 @@ function countIncome () {
     var transactionContainer = document.getElementById("page-container")
     var transactionSection = document.getElementById("transaction-section")
     
-    if (transactionSectionForAdd.childNodes.length + 1 > 4) {
+    if (transactionSectionForAdd.childNodes.length + 1 >= 4) {
         var previousSublings = document.querySelector(".page-container_active")
         previousSublings.classList.remove("page-container_active")
         var pageContainer = document.createElement("div")
@@ -51,7 +51,7 @@ function countOutcome() {
     var transactionContainer = document.getElementById("page-container")
     var transactionSection = document.getElementById("transaction-section")
 
-    if (transactionSectionForAdd.childNodes.length + 1 > 4) {
+    if (transactionSectionForAdd.childNodes.length + 1 >= 4) {
         var previousSublings = document.querySelector(".page-container_active")
         previousSublings.classList.remove("page-container_active")
         var pageContainer = document.createElement("div")
